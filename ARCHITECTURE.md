@@ -47,7 +47,7 @@ TriGo uses Next.js API routes for backend functionality, organized into logical 
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                       API Routes                              │
+│                       API Routes                             │
 │                                                              │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
 │  │ Auth     │  │ Booking  │  │ Location │  │ User     │      │
@@ -101,17 +101,17 @@ TriGo uses Supabase (PostgreSQL) for data storage, with the following schema str
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│                     TriGo Application                       │
+│                     TriGo Application                      │
 └───────────────┬────────────────────────────┬───────────────┘
                 │                            │
-    ┌───────────▼──────────┐      ┌─────────▼───────────┐
-    │   Google Maps API    │      │     Supabase        │
-    │                      │      │                     │
-    │ - Geocoding          │      │ - Authentication    │
-    │ - Directions         │      │ - Database          │
-    │ - Distance Matrix    │      │ - Storage           │
-    │ - Places             │      │ - Realtime          │
-    └──────────────────────┘      └─────────────────────┘
+    ┌───────────▼──────────┐       ┌─────────▼───────────┐
+    │   Google Maps API    │       │     Supabase        │
+    │                      │       │                     │
+    │ - Geocoding          │       │ - Authentication    │
+    │ - Directions         │       │ - Database          │
+    │ - Distance Matrix    │       │ - Storage           │
+    │ - Places             │       │ - Realtime          │
+    └──────────────────────┘       └─────────────────────┘
 ```
 
 ### External API Integrations:
@@ -173,7 +173,7 @@ TriGo uses Supabase (PostgreSQL) for data storage, with the following schema str
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     Security Layers                          │
+│                     Security Layers                         │
 │                                                             │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
 │  │ Client-side │  │  API Layer  │  │  Data Layer │          │
@@ -204,15 +204,15 @@ TriGo uses Supabase (PostgreSQL) for data storage, with the following schema str
 For future growth, TriGo can scale horizontally using the following architecture:
 
 ```
-                   ┌─────────────┐
+                   ┌───────────────┐
                    │ Load Balancer │
                    └───────┬───────┘
                            │
       ┌──────────┬─────────┴────────┬──────────┐
       │          │                  │          │
 ┌─────▼─────┐┌───▼───┐        ┌─────▼────┐┌────▼────┐
-│  App      ││  App  │   ...   │  App     ││  App    │
-│  Server 1 ││Server 2│        │ Server N-1││Server N │
+│  App      ││  App  │   ...  │  App     ││  App    │
+│ Server 1  ││Server2│        │Server N-1││Server N │
 └─────┬─────┘└───┬───┘        └─────┬────┘└────┬────┘
       │          │                  │          │
       └──────────┴──────┬───────────┴──────────┘
@@ -244,7 +244,7 @@ For future growth, TriGo can scale horizontally using the following architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                  Development Environment                     │
+│                  Development Environment                    │
 │                                                             │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐          │
 │  │ Local Next  │  │  Local DB   │  │  Mocked     │          │
