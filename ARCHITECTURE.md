@@ -6,8 +6,8 @@ This document describes the architectural structure of the TriGo application, in
 
 ```
 ┌───────────────┐     ┌───────────────┐     ┌───────────────┐
-│  Client Layer │     │ Services Layer │     │    Data Layer │
-│  (Next.js UI) │────▶│  (API Routes)  │────▶│   (Supabase)  │
+│  Client Layer │     │ Services Layer│     │    Data Layer │
+│  (Next.js UI) │────▶│  (API Routes) │────▶│   (Supabase)  │
 └───────────────┘     └───────────────┘     └───────────────┘
 ```
 
